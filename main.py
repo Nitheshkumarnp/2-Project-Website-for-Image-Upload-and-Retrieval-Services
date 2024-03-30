@@ -45,7 +45,7 @@ async def get_images(id: int):
             image = images[0]
             bytesData = bytes(image)
             if bytesData:
-                return Response(content=bytesData, media_type="image/jpeg")
+                return Response(content=bytesData, media_type="image/*")
             else:
                 raise HTTPException(status_code=404, detail="Image not found")
     except Exception as e:
