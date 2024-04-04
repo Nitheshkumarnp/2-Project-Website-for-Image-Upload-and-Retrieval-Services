@@ -5,7 +5,7 @@ First install the packages required for the application.
     pip install -r requirements.txt
 (or)
 
-    pip install fastapi psycopg2-binary uvicorn python-dotenv
+    pip install fastapi psycopg2-binary uvicorn python-dotenv python-multipart
         
 Note: make sure on python-dotenv not dotenv
 
@@ -29,7 +29,11 @@ In this application, we use fastapi with posgresSQL which is hosted from render 
 
 ### Functionality:
     
-In this application, we connected posgresSQL with fastapi to return response to ReactUI which get data from user table in database.
+In this application, we connected posgresSQL with fastapi to return response to ReactUI which store and get data from imagess table in database.
+
+We are uploading an image file from ReactUI which received in fastapi and store it in posgresSQL in imagess table.
+
+And retrieval of image in response from same imagess table which will be available in response only, not integrated in UI. Use developer tool and see the image.
     
 Added CORS, to run in any environment.
     
